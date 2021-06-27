@@ -24,9 +24,9 @@ $router->group(['prefix'=>'api','middleware'=>'auth'],function() use($router) {
 } );
 
 
-$router->group(['prefix'=>'api','middleware'=>'auth'],function() use($router) {
-    $router->post('product','ProductController@create');
-    
+$router->group(['prefix'=>'product','middleware'=>'auth'],function() use($router) {
+    $router->post('/','ProductController@create');
+    $router->get('/','ProductController@index'); 
     
 } );
 

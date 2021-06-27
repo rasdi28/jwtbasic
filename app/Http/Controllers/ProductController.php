@@ -8,6 +8,7 @@ use Illuminate\Validation\ValidationException;
 class ProductController extends Controller 
 {
 
+    //create
     public function create(Request $request)
     {
         $this-> validate($request, [
@@ -24,5 +25,13 @@ class ProductController extends Controller
             $product
         ]);
 
+    }
+
+    //read 
+
+    public function index()
+    {
+        $product = Product::all();
+        return response()->json($product);
     }
 }
