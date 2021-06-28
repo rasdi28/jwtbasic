@@ -14,7 +14,7 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return "hello rasdi abdulrohman";
 });
 
 $router->group(['prefix'=>'api','middleware'=>'auth'],function() use($router) {
